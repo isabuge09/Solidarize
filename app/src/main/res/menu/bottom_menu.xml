@@ -4,10 +4,7 @@
         android:id="@+id/home"
         android:title="Home"
         android:icon="@drawable/baseline_home_24"/>
-    <item
-        android:id="@+id/voluntariado"
-        android:title="Volunteer"
-        android:icon="@drawable/baseline_assignment_ind_24"/>
+    <item android:title="Volunteer" />
     <item
         android:id="@+id/fab"
         android:title=""
