@@ -34,20 +34,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="280dp"
                         android:scaleType="centerCrop"
+
                         tools:srcCompat="@drawable/fundo1" />
 
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top|center_horizontal"
-                        android:layout_margin="16dp"
-                        android:background="@color/white"
-                        android:paddingHorizontal="16dp"
-                        android:paddingVertical="8dp"
-                        android:text="Detalhes Voluntariado"
-                        android:textColor="#6B4CE6"
-                        android:textSize="14sp" />
                 </FrameLayout>
 
                 <LinearLayout
@@ -136,7 +125,7 @@
                         android:layout_marginTop="24dp"
                         android:text="Me candidatar a Vaga"
                         android:textSize="16sp"
-                        app:backgroundTint="#6B4CE6"
+                        app:backgroundTint="@color/primaryColor"
                         app:cornerRadius="28dp" />
 
                 </LinearLayout>
