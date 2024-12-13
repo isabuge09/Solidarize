@@ -1,6 +1,7 @@
 package daniel.guilherme.isabelly.maria.solidarize.activities;
 
 import android.os.Bundle;
+import android.service.voice.VoiceInteractionSession;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -21,14 +22,14 @@ import daniel.guilherme.isabelly.maria.solidarize.fragments.VoluntariadoFragment
 
 public class HomeActivity extends AppCompatActivity {
 
-    ActivityHomeBinding binding;
+    ActivityHomeBinding biding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_evento);
+        setContentView(R.layout.activity_home);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

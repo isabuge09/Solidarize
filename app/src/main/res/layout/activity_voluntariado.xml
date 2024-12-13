@@ -41,9 +41,9 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_margin="16dp"
-                        android:background="@drawable/circle_background"
-                        android:src="@drawable/ic_arrow_back"
-                        android:tint="#FFFFFF" />
+                        android:background="@color/black"
+                        android:src="@drawable/baseline_arrow_back_24"
+                         />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -51,7 +51,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|center_horizontal"
                         android:layout_margin="16dp"
-                        android:background="@drawable/pill_background"
+                        android:background="@color/white"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="8dp"
                         android:text="Detalhes Voluntariado"
@@ -87,7 +87,6 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:scaleType="centerCrop"
-                            app:shapeAppearanceOverlay="@style/CircleImageView"
                             app:srcCompat="@drawable/baseline_settings_24" />
 
                         <TextView
@@ -105,8 +104,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="?attr/selectableItemBackgroundBorderless"
-                            android:src="@drawable/ic_share"
-                            android:tint="#5F6368" />
+                            android:src="@drawable/baseline_add_24" />
                     </LinearLayout>
 
                     <TextView
