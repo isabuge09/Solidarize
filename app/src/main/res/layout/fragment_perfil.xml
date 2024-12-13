@@ -19,7 +19,7 @@
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:background="@android:color/background_dark"
+                android:background="@drawable/wallpaper"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
                 android:layout_height="120dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="140dp"
-                android:src="@drawable/baseline_person_24"
+                android:src="@drawable/foto_perfil"
                 android:background="@drawable/ic_launcher_background"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -51,7 +51,7 @@
                     android:id="@+id/userName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Usuário"
+                    android:text="Daniel Haddad Maia Barbosa"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -65,7 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
-                        android:text="nickname"
+                        android:text="danikkj"
                         android:textColor="@android:color/darker_gray" />
 
                     <TextView
@@ -74,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/baseline_add_location_24"
                         android:drawablePadding="4dp"
-                        android:text="Localização"
+                        android:text="Serra, ES"
                         android:textColor="@android:color/darker_gray" />
                 </LinearLayout>
 
@@ -85,7 +85,7 @@
                     android:layout_marginTop="4dp"
                     android:drawableStart="@drawable/baseline_settings_24"
                     android:drawablePadding="4dp"
-                    android:text="email@example.com"
+                    android:text="haddadmaia@gmail.com"
                     android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
@@ -106,7 +106,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginBottom="112dp"
                 android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/collaboratorTitle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/userInfoLayout">
 
@@ -165,7 +167,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="Descrição da pessoa" />
+                        android:text=" Ajudo instituições de vez em quando, quando elas realmente precisam de um toque de criatividade e bom humor. Porque não há nada melhor do que fazer o bem com um sorriso no rosto, certo? " />
 
                 </LinearLayout>
 
