@@ -20,7 +20,6 @@
             android:layout_height="100dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/RoundedImageView"
             tools:src="@tools:sample/avatars" />
 
         <TextView
