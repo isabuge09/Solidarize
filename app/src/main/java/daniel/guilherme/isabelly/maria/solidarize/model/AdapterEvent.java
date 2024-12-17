@@ -39,16 +39,16 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventViewHol
     public void onBindViewHolder(@NonNull EventViewHolder holder, int position) {
         Evento event = eventList.get(position);
 
-        TextView tvname = holder.itemView.findViewById(R.id.tvName);
+        TextView tvname = holder.itemView.findViewById(R.id.organizerNameTextView);
         tvname.setText(event.nomeIntituicao);
 
-        TextView tvtitulo = holder.itemView.findViewById(R.id.tvTitulo);
+        TextView tvtitulo = holder.itemView.findViewById(R.id.eventNameTextView);
         tvtitulo.setText(event.titulo);
 
-        TextView tvdesc = holder.itemView.findViewById(R.id.tvDesc);
+        TextView tvdesc = holder.itemView.findViewById(R.id.eventDescriptionTextView);
         tvdesc.setText(event.descricao);
 
-        TextView tvData = holder.itemView.findViewById(R.id.tvDate);
+        TextView tvData = holder.itemView.findViewById(R.id.dateTimeTextView);
         tvData.setText(event.data.toString());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

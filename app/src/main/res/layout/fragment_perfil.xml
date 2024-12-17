@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- Imagem de Capa -->
             <ImageView
                 android:id="@+id/coverImage"
                 android:layout_width="0dp"
@@ -24,7 +25,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
+            <!-- Imagem de Perfil -->
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profileImage"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
@@ -33,8 +35,10 @@
                 android:src="@drawable/foto_perfil"
                 android:background="@drawable/ic_launcher_background"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
 
+            <!-- Informações do Usuário -->
             <LinearLayout
                 android:id="@+id/userInfoLayout"
                 android:layout_width="0dp"
@@ -72,7 +76,6 @@
                         android:id="@+id/userLocation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/baseline_add_location_24"
                         android:drawablePadding="4dp"
                         android:text="Serra, ES"
                         android:textColor="@android:color/darker_gray" />
@@ -83,13 +86,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:drawableStart="@drawable/baseline_settings_24"
                     android:drawablePadding="4dp"
                     android:text="haddadmaia@gmail.com"
                     android:textColor="@android:color/darker_gray" />
-
             </LinearLayout>
 
+            <!-- Botão de Editar Perfil -->
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/editProfileFab"
                 android:layout_width="wrap_content"
@@ -100,42 +102,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/userInfoLayout"
                 app:layout_constraintEnd_toEndOf="parent" />
 
-            <LinearLayout
-                android:id="@+id/socialButtonsLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="112dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="@+id/collaboratorTitle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/userInfoLayout">
-
-                <ImageButton
-                    android:id="@+id/socialButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/baseline_person_24" />
-
-                <ImageButton
-                    android:id="@+id/socialButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/baseline_assignment_ind_24" />
-
-                <ImageButton
-                    android:id="@+id/socialButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/baseline_add_location_24" />
-            </LinearLayout>
-
+            <!-- Descrição do Usuário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/descriptionCard"
                 android:layout_width="0dp"
@@ -145,7 +112,7 @@
                 android:layout_marginEnd="16dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
-                app:layout_constraintEnd_toStartOf="@+id/socialButtonsLayout"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/userInfoLayout">
 
@@ -167,12 +134,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text=" Ajudo instituições de vez em quando, quando elas realmente precisam de um toque de criatividade e bom humor. Porque não há nada melhor do que fazer o bem com um sorriso no rosto, certo? " />
-
+                        android:text="Ajudo instituições de vez em quando, quando elas realmente precisam de um toque de criatividade e bom humor. Porque não há nada melhor do que fazer o bem com um sorriso no rosto, certo?" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
+            <!-- Título de Colaboradores -->
             <TextView
                 android:id="@+id/collaboratorTitle"
                 android:layout_width="0dp"
@@ -187,6 +154,45 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/descriptionCard" />
 
+            <!-- Redes Sociais em um novo Layout -->
+            <LinearLayout
+                android:id="@+id/socialButtonsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:gravity="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <!-- Ícones das Redes Sociais -->
+                <ImageButton
+                    android:id="@+id/socialButton1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/baseline_person_24" />
+
+                <ImageButton
+                    android:id="@+id/socialButton2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/baseline_assignment_ind_24" />
+
+                <ImageButton
+                    android:id="@+id/socialButton3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/baseline_add_location_24" />
+            </LinearLayout>
+
+            <!-- RecyclerView para os Colaboradores -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/collaboratorRecyclerView"
                 android:layout_width="0dp"
@@ -199,6 +205,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/collaboratorTitle" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
