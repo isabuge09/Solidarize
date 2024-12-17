@@ -11,13 +11,10 @@ public class Instituicao {
 
     List<String> categorias;
 
-    boolean curtiu;
-
-    public Instituicao(int foto, String nome, String descricao, List<String> categorias, boolean curtiu) {
+    public Instituicao(int foto, String nome, String descricao, List<String> categorias) {
         this.foto = foto;
         this.nome = nome;
         this.descricao = descricao;
         this.categorias = categorias;
-        this.curtiu = curtiu;
     }
 }

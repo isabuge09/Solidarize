@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import daniel.guilherme.isabelly.maria.solidarize.R;
+import daniel.guilherme.isabelly.maria.solidarize.util.Config;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -23,9 +24,19 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Iniciar HomeActivity e finalizar MainActivity
-        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-        startActivity(intent);
-        finish(); // Finaliza MainActivity para que o usuário não possa voltar a ela
+        // Se o usuário ainda não logou, então não existe informação de login guardada na app.
+        // Então a app é redirecionada para a tela de login.
+        if(Config.getLogin(MainActivity.this).isEmpty()) {
+            Intent i = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(i);
+            finish();
+        }
+        // Se o usuário já logou, então a informação de login está guardada na app. Então
+        // a app é redirecionada para a tela principal da app (HomeActivity)
+        else {
+            Intent i = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(i);
+            finish();
+        }
     }
 }

@@ -7,14 +7,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import daniel.guilherme.isabelly.maria.solidarize.R;
-
 public class HomeActivityViewModel extends ViewModel {
 
     public List<Evento> getEventos() {
 
         List<Evento> eventos = new ArrayList<>();
-
 
         Date dataHoraAtual = new Date();
         Evento e1 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
@@ -46,43 +43,43 @@ public class HomeActivityViewModel extends ViewModel {
 
     }
 
-    List<Instituicao> getInstituicoes() {
+    public List<Instituicao> getInstituicoes() {
 
         List<String> categorias = new ArrayList<>();
         categorias.add("meio ambiente");
 
         List<Instituicao> instituicoes = new ArrayList<>();
 
-        Instituicao i1 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas",categorias,true);
+        Instituicao i1 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas",categorias);
         instituicoes.add(i1);
-        Instituicao i2 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias,true);
+        Instituicao i2 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i2);
-        Instituicao i3 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas", categorias,true);
+        Instituicao i3 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas", categorias);
         instituicoes.add(i3);
-        Instituicao i4 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias,true);
+        Instituicao i4 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i4);
-        Instituicao i5 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas",categorias,true);
+        Instituicao i5 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas",categorias);
         instituicoes.add(i5);
-        Instituicao i6 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas",categorias,true);
+        Instituicao i6 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas",categorias);
         instituicoes.add(i6);
-        Instituicao i7 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias,true);
+        Instituicao i7 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i7);
-        Instituicao i8 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias,true);
+        Instituicao i8 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i8);
-        Instituicao i9 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias,true);
+        Instituicao i9 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i9);
-        Instituicao i10 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias,true);
+        Instituicao i10 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i10);
-        Instituicao i11 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias,true);
+        Instituicao i11 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i11);
-        Instituicao i12 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias,true);
+        Instituicao i12 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i12);
 
         return instituicoes;
 
     }
 
-    List<Voluntariado> getVoluntariados() {
+    public List<Voluntariado> getVoluntariados() {
 
         List<Voluntariado> voluntariados = new ArrayList<>();
 
@@ -114,6 +111,23 @@ public class HomeActivityViewModel extends ViewModel {
 
         return voluntariados;
 
+    }
+
+    public List<PerfilColaboracao> getColaboracoes(){
+        List<PerfilColaboracao> colaboracoes = new ArrayList<>();
+
+        PerfilColaboracao c1 = new PerfilColaboracao(1);
+        colaboracoes.add(c1);
+        PerfilColaboracao c2 = new PerfilColaboracao(1);
+        colaboracoes.add(c2);
+        PerfilColaboracao c3 = new PerfilColaboracao(1);
+        colaboracoes.add(c3);
+        PerfilColaboracao c4 = new PerfilColaboracao(1);
+        colaboracoes.add(c4);
+        PerfilColaboracao c5 = new PerfilColaboracao(1);
+        colaboracoes.add(c5);
+
+        return colaboracoes;
     }
 
 
