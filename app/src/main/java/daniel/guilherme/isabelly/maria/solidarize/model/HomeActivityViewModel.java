@@ -11,7 +11,7 @@ import daniel.guilherme.isabelly.maria.solidarize.R;
 
 public class HomeActivityViewModel extends ViewModel {
 
-    List<Evento> getEventos() {
+    public List<Evento> getEventos() {
 
         List<Evento> eventos = new ArrayList<>();
 
