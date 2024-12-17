@@ -1,14 +1,23 @@
 package daniel.guilherme.isabelly.maria.solidarize.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import daniel.guilherme.isabelly.maria.solidarize.R;
+import daniel.guilherme.isabelly.maria.solidarize.activities.EventoActivity;
+import daniel.guilherme.isabelly.maria.solidarize.model.AdapterEvent;
+import daniel.guilherme.isabelly.maria.solidarize.model.HomeActivityViewModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,12 +48,8 @@ public class EventsFragment extends Fragment {
      * @return A new instance of fragment EventsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static EventsFragment newInstance(String param1, String param2) {
+    public static EventsFragment newInstance() {
         EventsFragment fragment = new EventsFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -62,5 +67,25 @@ public class EventsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_events, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        HomeActivityViewModel mViewModel = new ViewModelProvider(getActivity()).get(HomeActivityViewModel.class);
+
+        AdapterEvent adapterEvent = new AdapterEvent(mViewModel.getEventos(), EventsFragment.this);
+
+        RecyclerView rvEventos = view.findViewById(R.id.rvEvent);
+        rvEventos.setAdapter(adapterEvent);
+
+        rvEventos.setLayoutManager(new LinearLayoutManager(getContext()));
+
+    }
+
+    public void navegarParaDetalhesEvento(){
+        Intent i = new Intent(getActivity(), EventoActivity.class);
+        getActivity().startActivity(i);
     }
 }

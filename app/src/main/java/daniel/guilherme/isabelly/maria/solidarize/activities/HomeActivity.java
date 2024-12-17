@@ -22,7 +22,7 @@ import daniel.guilherme.isabelly.maria.solidarize.fragments.VoluntariadoFragment
 
 public class HomeActivity extends AppCompatActivity {
 
-    ActivityHomeBinding biding;
+    ActivityHomeBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
