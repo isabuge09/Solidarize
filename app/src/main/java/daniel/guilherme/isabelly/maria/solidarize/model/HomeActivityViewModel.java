@@ -2,7 +2,6 @@ package daniel.guilherme.isabelly.maria.solidarize.model;
 
 import androidx.lifecycle.ViewModel;
 
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -14,121 +13,75 @@ public class HomeActivityViewModel extends ViewModel {
         List<Evento> eventos = new ArrayList<>();
 
         Date dataHoraAtual = new Date();
-        Evento e1 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
+        Evento e1 = new Evento("Instituição ABC", dataHoraAtual, "Distribuição de alimentos", "Assistência Social", "Organizador X", "Evento para distribuição de alimentos a famílias carentes");
+        Evento e2 = new Evento("Instituto São João", dataHoraAtual, "Campanha de arrecadação de roupas", "Educação", "Organizador Y", "Campanha para arrecadar roupas para crianças carentes");
+        Evento e3 = new Evento("Cidadania Ativa", dataHoraAtual, "Ação de limpeza comunitária", "Meio Ambiente", "Organizador Z", "Evento para limpeza de praças públicas");
+
         eventos.add(e1);
-        Evento e2 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
         eventos.add(e2);
-        Evento e3 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
         eventos.add(e3);
-        Evento e4 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
-        eventos.add(e4);
-        Evento e5 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
-        eventos.add(e5);
-        Evento e6 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
-        eventos.add(e6);
-        Evento e7 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
-        eventos.add(e7);
-        Evento e8 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
-        eventos.add(e8);
-        Evento e9 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
-        eventos.add(e9);
-        Evento e10 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
-        eventos.add(e10);
-        Evento e11 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
-        eventos.add(e11);
-        Evento e12 = new Evento("Instituto consuelo pinheiro",dataHoraAtual, "Doação de cestas básicas","evento destinado para doação");
-        eventos.add(e12);
 
         return eventos;
-
     }
 
     public List<Instituicao> getInstituicoes() {
 
         List<String> categorias = new ArrayList<>();
-        categorias.add("meio ambiente");
+        categorias.add("Meio ambiente");
+        categorias.add("Saúde");
+        categorias.add("Educação");
 
         List<Instituicao> instituicoes = new ArrayList<>();
 
-        Instituicao i1 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas",categorias);
+        Instituicao i1 = new Instituicao(1, "Instituto Cidadania Viva", "Distribuição de alimentos", categorias);
+        Instituicao i2 = new Instituicao(2, "ONG Esperança", "Campanha de arrecadação de roupas", categorias);
+        Instituicao i3 = new Instituicao(3, "Fundação Vida Melhor", "Projeto de assistência médica", categorias);
+        Instituicao i4 = new Instituicao(4, "Projeto Verde", "Ações de preservação ambiental", categorias);
+        Instituicao i5 = new Instituicao(5, "Instituto Jovem Saber", "Oficinas educativas para jovens", categorias);
+
         instituicoes.add(i1);
-        Instituicao i2 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i2);
-        Instituicao i3 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas", categorias);
         instituicoes.add(i3);
-        Instituicao i4 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
         instituicoes.add(i4);
-        Instituicao i5 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas",categorias);
         instituicoes.add(i5);
-        Instituicao i6 = new Instituicao(1,"Instituto consuelo pinheiro", "Doação de cestas básicas",categorias);
-        instituicoes.add(i6);
-        Instituicao i7 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
-        instituicoes.add(i7);
-        Instituicao i8 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
-        instituicoes.add(i8);
-        Instituicao i9 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
-        instituicoes.add(i9);
-        Instituicao i10 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
-        instituicoes.add(i10);
-        Instituicao i11 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
-        instituicoes.add(i11);
-        Instituicao i12 = new Instituicao(1,"Instituto consuelo pinheiro","Doação de cestas básicas",categorias);
-        instituicoes.add(i12);
 
         return instituicoes;
-
     }
 
     public List<Voluntariado> getVoluntariados() {
 
         List<Voluntariado> voluntariados = new ArrayList<>();
 
-        Voluntariado v1 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v1);
-        Voluntariado v2 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v2);
-        Voluntariado v3 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v3);
-        Voluntariado v4 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v4);
-        Voluntariado v5 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v5);
-        Voluntariado v6 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v6);
-        Voluntariado v7 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v7);
-        Voluntariado v8 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v8);
-        Voluntariado v9 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v9);
-        Voluntariado v10 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v10);
-        Voluntariado v11 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v11);
-        Voluntariado v12 = new Voluntariado(1, "Jardineiros Urbanos", "Carga Horária: 4h");
-        voluntariados.add(v12);
+        Voluntariado v1 = new Voluntariado(1, "Voluntários do Bem", "Carga Horária: 4h");
+        Voluntariado v2 = new Voluntariado(2, "Jardineiros Urbanos", "Carga Horária: 5h");
+        Voluntariado v3 = new Voluntariado(3, "Educadores Sociais", "Carga Horária: 3h");
+        Voluntariado v4 = new Voluntariado(4, "Assistência Alimentar", "Carga Horária: 6h");
+        Voluntariado v5 = new Voluntariado(5, "Mãos que Ajudam", "Carga Horária: 4h");
 
+        voluntariados.add(v1);
+        voluntariados.add(v2);
+        voluntariados.add(v3);
+        voluntariados.add(v4);
+        voluntariados.add(v5);
 
         return voluntariados;
-
     }
 
-    public List<PerfilColaboracao> getColaboracoes(){
+    public List<PerfilColaboracao> getColaboracoes() {
         List<PerfilColaboracao> colaboracoes = new ArrayList<>();
 
         PerfilColaboracao c1 = new PerfilColaboracao(1);
+        PerfilColaboracao c2 = new PerfilColaboracao(2);
+        PerfilColaboracao c3 = new PerfilColaboracao(3);
+        PerfilColaboracao c4 = new PerfilColaboracao(4);
+        PerfilColaboracao c5 = new PerfilColaboracao(5);
+
         colaboracoes.add(c1);
-        PerfilColaboracao c2 = new PerfilColaboracao(1);
         colaboracoes.add(c2);
-        PerfilColaboracao c3 = new PerfilColaboracao(1);
         colaboracoes.add(c3);
-        PerfilColaboracao c4 = new PerfilColaboracao(1);
         colaboracoes.add(c4);
-        PerfilColaboracao c5 = new PerfilColaboracao(1);
         colaboracoes.add(c5);
 
         return colaboracoes;
     }
-
-
 }

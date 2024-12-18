@@ -7,6 +7,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 import daniel.guilherme.isabelly.maria.solidarize.R;
@@ -41,6 +43,12 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventViewHol
 
         TextView tvname = holder.itemView.findViewById(R.id.organizerNameTextView);
         tvname.setText(event.nomeIntituicao);
+
+        TextView tvcategoria = holder.itemView.findViewById(R.id.categoryChip);
+        tvcategoria.setText(event.categoria);
+
+        TextView tvorganizador = holder.itemView.findViewById(R.id.organizerRoleTextView);
+        tvorganizador.setText(event.organizador);
 
         TextView tvtitulo = holder.itemView.findViewById(R.id.eventNameTextView);
         tvtitulo.setText(event.titulo);

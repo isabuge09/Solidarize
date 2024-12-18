@@ -19,8 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/background"
-            app:contentInsetStart="0dp"
-            app:layout_scrollFlags="scroll|enterAlways|snap">
+            android:layout_marginTop="5dp"
+            app:contentInsetStart="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                         android:layout_height="match_parent"
                         android:background="@null"
                         app:iconifiedByDefault="false"
-                        app:queryHint="Pesquisar eventos..."
+                        app:queryHint="Pesquisar..."
                         app:searchIcon="@drawable/baseline_search_24" />
 
                 </com.google.android.material.card.MaterialCardView>
@@ -114,10 +114,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvEvent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="720dp"
         android:clipToPadding="false"
         android:paddingTop="8dp"
         android:paddingBottom="16dp"
+        tools:listitem="@layout/evento_item"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
