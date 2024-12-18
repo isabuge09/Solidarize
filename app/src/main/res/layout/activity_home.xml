@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lavender"
+    android:background="@color/background"
     tools:context=".activities.HomeActivity">
 
     <FrameLayout
@@ -40,6 +40,6 @@
         android:src="@drawable/baseline_search_24"
         app:layout_anchor="@id/bottomAppBar"
         app:maxImageSize="40dp"
-        app:tint="@color/lavender" />
+        app:tint="@color/primaryColor" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

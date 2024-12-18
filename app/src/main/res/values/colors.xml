@@ -9,4 +9,15 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lavender">#8692f7</color>
     <color name="primaryColor">#1DB954</color>
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#FF4081</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="icon_tint">#9E9E9E</color>
+    <color name="background">#FFFFFF</color>
+    <color name="stroke_color">#E0E0E0</color>
+    <color name="chip_background_color">#E0E0E0</color>
+
 </resources>

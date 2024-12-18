@@ -123,7 +123,6 @@
             android:drawablePadding="8dp"
             android:text="Sábado, 20 de Janeiro • 09:00 - 17:00"
             android:textSize="16sp"
-            app:drawableStartCompat="@drawable/baseline_calendar_month_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/organizerCard" />
@@ -138,7 +137,6 @@
             android:drawablePadding="8dp"
             android:text="Rua das Flores, 123 - Centro"
             android:textSize="16sp"
-            app:drawableStartCompat="@drawable/baseline_add_location_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dateTimeTextView" />
 

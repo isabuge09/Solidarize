@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 
 import daniel.guilherme.isabelly.maria.solidarize.R;
 import daniel.guilherme.isabelly.maria.solidarize.activities.EventoActivity;
+import daniel.guilherme.isabelly.maria.solidarize.activities.HomeActivity;
+import daniel.guilherme.isabelly.maria.solidarize.activities.MainActivity;
 import daniel.guilherme.isabelly.maria.solidarize.model.AdapterEvent;
 import daniel.guilherme.isabelly.maria.solidarize.model.HomeActivityViewModel;
 
@@ -43,8 +45,6 @@ public class EventsFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment EventsFragment.
      */
     // TODO: Rename and change types and number of parameters
@@ -86,6 +86,6 @@ public class EventsFragment extends Fragment {
 
     public void navegarParaDetalhesEvento(){
         Intent i = new Intent(getActivity(), EventoActivity.class);
-        getActivity().startActivity(i);
+        startActivity(i);
     }
 }

@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="Edit Profile"
+            android:text="Editar Perfil"
             android:textColor="@android:color/white"
             android:textSize="28sp"
             android:textStyle="bold"
@@ -48,7 +48,6 @@
             android:id="@+id/editProfileImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="Edit profile image"
             android:backgroundTint="@color/primaryColor"
             app:fabSize="mini"
             app:layout_constraintBottom_toBottomOf="@id/profileImageView"
@@ -61,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Edit Cover Image"
+            android:text="Editar immagem de capa"
             android:textColor="@color/primaryColor"
             app:icon="@drawable/baseline_add_24"
             app:iconTint="@color/primaryColor"
@@ -78,7 +77,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="12dp"
-            android:hint="First name"
+            android:hint="Primeiro Nome"
             app:layout_constraintEnd_toStartOf="@+id/lastNameInputLayout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/editCoverImageButton">
@@ -98,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="24dp"
-            android:hint="Last name"
+            android:hint="Sobrenome"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/firstNameInputLayout"
             app:layout_constraintTop_toTopOf="@+id/firstNameInputLayout">
@@ -136,7 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:hint="Birth Date"
+            android:hint="      Data de Nascimento"
             app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
             app:startIconDrawable="@drawable/baseline_calendar_month_24">
 
@@ -174,7 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:text="Change Password"
+            android:text="Mudar Senha"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -187,7 +186,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:hint="Current Password"
+            android:hint="Senha Atual"
             app:layout_constraintTop_toBottomOf="@id/changePasswordTitle"
             app:passwordToggleEnabled="true">
 
@@ -206,7 +205,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:hint="New Password"
+            android:hint="Nova Senha"
             app:layout_constraintTop_toBottomOf="@id/currentPasswordInputLayout"
             app:passwordToggleEnabled="true">
 
@@ -225,7 +224,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="16dp"
-            android:hint="Confirm New Password"
+            android:hint="Confirmar Nova Senha"
             app:layout_constraintTop_toBottomOf="@id/newPasswordInputLayout"
             app:passwordToggleEnabled="true">
 
@@ -246,7 +245,7 @@
             android:layout_marginBottom="24dp"
             android:backgroundTint="@color/primaryColor"
             android:padding="12dp"
-            android:text="Save Changes"
+            android:text="Salvar Alterações"
             android:textAllCaps="false"
             app:cornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
