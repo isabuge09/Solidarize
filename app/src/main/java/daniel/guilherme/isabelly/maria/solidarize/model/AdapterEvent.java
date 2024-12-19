@@ -78,3 +78,4 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventViewHol
         return eventList.size();
     }
 }
+

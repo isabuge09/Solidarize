@@ -1,10 +1,10 @@
 package daniel.guilherme.isabelly.maria.solidarize.activities;
 
 import android.os.Bundle;
-import android.service.voice.VoiceInteractionSession;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -23,6 +23,7 @@ import daniel.guilherme.isabelly.maria.solidarize.fragments.VoluntariadoFragment
 public class HomeActivity extends AppCompatActivity {
 
     ActivityHomeBinding binding;
+    private ImageView userImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,13 @@ public class HomeActivity extends AppCompatActivity {
 
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Inicializar ImageView da Toolbar
+        View toolbar = findViewById(R.id.toolbar);
+        userImageView = toolbar.findViewById(R.id.userImageView);
+
+        // Configurar clique na imagem de perfil
+        userImageView.setOnClickListener(v -> replaceFragment(new PerfilFragment()));
 
         replaceFragment(new EventsFragment());
         binding.bottomNavigationView.setBackground(null);
@@ -58,8 +66,6 @@ public class HomeActivity extends AppCompatActivity {
 
             return true;
         });
-
-
     }
 
     private void replaceFragment(Fragment fragment) {

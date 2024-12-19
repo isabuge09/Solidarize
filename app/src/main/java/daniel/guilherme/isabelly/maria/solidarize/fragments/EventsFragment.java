@@ -2,24 +2,24 @@ package daniel.guilherme.isabelly.maria.solidarize.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-
+import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import daniel.guilherme.isabelly.maria.solidarize.R;
 import daniel.guilherme.isabelly.maria.solidarize.activities.EventoActivity;
 import daniel.guilherme.isabelly.maria.solidarize.activities.HomeActivity;
 import daniel.guilherme.isabelly.maria.solidarize.activities.MainActivity;
 import daniel.guilherme.isabelly.maria.solidarize.model.AdapterEvent;
 import daniel.guilherme.isabelly.maria.solidarize.model.HomeActivityViewModel;
+import daniel.guilherme.isabelly.maria.solidarize.model.Evento;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,6 +36,8 @@ public class EventsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private static final String TAG = "EventsFragment";
 
     public EventsFragment() {
         // Required empty public constructor
@@ -65,6 +67,7 @@ public class EventsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView called");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_events, container, false);
     }
@@ -72,20 +75,43 @@ public class EventsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Log.d(TAG, "onViewCreated called");
 
         HomeActivityViewModel mViewModel = new ViewModelProvider(getActivity()).get(HomeActivityViewModel.class);
 
-        AdapterEvent adapterEvent = new AdapterEvent(mViewModel.getEventos(), EventsFragment.this);
+        List<Evento> eventos = mViewModel.getEventos();
+
+        if (eventos == null || eventos.isEmpty()) {
+            Log.e(TAG, "Eventos list is null or empty");
+            return;
+        }
+
+        Log.d(TAG, "Number of eventos: " + eventos.size());
+
+        AdapterEvent adapterEvent = new AdapterEvent(eventos, this);
 
         RecyclerView rvEventos = view.findViewById(R.id.rvEvent);
+        if (rvEventos == null) {
+            Log.e(TAG, "RecyclerView not found in layout");
+            return;
+        }
+
         rvEventos.setAdapter(adapterEvent);
-
         rvEventos.setLayoutManager(new LinearLayoutManager(getContext()));
-
+        Log.d(TAG, "RecyclerView setup complete");
     }
 
     public void navegarParaDetalhesEvento(){
-        Intent i = new Intent(getActivity(), EventoActivity.class);
-        startActivity(i);
+        try {
+            if (getActivity() != null) {
+                Intent i = new Intent(getActivity(), EventoActivity.class);
+                startActivity(i);
+            } else {
+                Log.e(TAG, "Activity is null when trying to navigate");
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error navigating to EventoActivity", e);
+        }
     }
 }
+

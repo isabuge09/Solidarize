@@ -52,11 +52,11 @@ public class HomeActivityViewModel extends ViewModel {
 
         List<Voluntariado> voluntariados = new ArrayList<>();
 
-        Voluntariado v1 = new Voluntariado(1, "Voluntários do Bem", "Carga Horária: 4h");
-        Voluntariado v2 = new Voluntariado(2, "Jardineiros Urbanos", "Carga Horária: 5h");
-        Voluntariado v3 = new Voluntariado(3, "Educadores Sociais", "Carga Horária: 3h");
-        Voluntariado v4 = new Voluntariado(4, "Assistência Alimentar", "Carga Horária: 6h");
-        Voluntariado v5 = new Voluntariado(5, "Mãos que Ajudam", "Carga Horária: 4h");
+        Voluntariado v1 = new Voluntariado(1, "Voluntários do Bem", "Carga Horária: 4h", "a");
+        Voluntariado v2 = new Voluntariado(2, "Jardineiros Urbanos", "Carga Horária: 5h", "a");
+        Voluntariado v3 = new Voluntariado(3, "Educadores Sociais", "Carga Horária: 3h", "a");
+        Voluntariado v4 = new Voluntariado(4, "Assistência Alimentar", "Carga Horária: 6h", "a");
+        Voluntariado v5 = new Voluntariado(5, "Mãos que Ajudam", "Carga Horária: 4h", "a");
 
         voluntariados.add(v1);
         voluntariados.add(v2);
@@ -70,11 +70,11 @@ public class HomeActivityViewModel extends ViewModel {
     public List<PerfilColaboracao> getColaboracoes() {
         List<PerfilColaboracao> colaboracoes = new ArrayList<>();
 
-        PerfilColaboracao c1 = new PerfilColaboracao(1);
-        PerfilColaboracao c2 = new PerfilColaboracao(2);
-        PerfilColaboracao c3 = new PerfilColaboracao(3);
-        PerfilColaboracao c4 = new PerfilColaboracao(4);
-        PerfilColaboracao c5 = new PerfilColaboracao(5);
+        PerfilColaboracao c1 = new PerfilColaboracao(1, "guilherme");
+        PerfilColaboracao c2 = new PerfilColaboracao(2, "daniel");
+        PerfilColaboracao c3 = new PerfilColaboracao(3, "maria");
+        PerfilColaboracao c4 = new PerfilColaboracao(4, "isabelly");
+        PerfilColaboracao c5 = new PerfilColaboracao(5, "stéphany");
 
         colaboracoes.add(c1);
         colaboracoes.add(c2);
