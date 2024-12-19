@@ -5,8 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
     tools:context=".fragments.PerfilFragment"
-    android:paddingTop="?attr/actionBarSize">
+    android:paddingTop="?attr/actionBarSize"
+    android:paddingBottom="70dp">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -35,7 +37,7 @@
                 android:layout_height="120dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="140dp"
-                android:src="@drawable/foto_perfil"
+                android:src="@drawable/pfp1"
                 android:background="@drawable/ic_launcher_background"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
