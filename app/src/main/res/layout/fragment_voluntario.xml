@@ -78,6 +78,7 @@
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvVolunteer"
             android:layout_width="409dp"
             android:layout_height="678dp"
             android:layout_marginStart="8dp"
