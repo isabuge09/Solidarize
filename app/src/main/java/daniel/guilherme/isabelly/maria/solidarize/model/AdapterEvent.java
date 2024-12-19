@@ -3,9 +3,12 @@ package daniel.guilherme.isabelly.maria.solidarize.model;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.chip.Chip;
 
 import org.w3c.dom.Text;
 
@@ -44,8 +47,8 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventViewHol
         TextView tvname = holder.itemView.findViewById(R.id.organizerNameTextView);
         tvname.setText(event.nomeIntituicao);
 
-        TextView tvcategoria = holder.itemView.findViewById(R.id.categoryChip);
-        tvcategoria.setText(event.categoria);
+        Chip categoria = holder.itemView.findViewById(R.id.categoryChip);
+        categoria.setText(event.categoria);
 
         TextView tvorganizador = holder.itemView.findViewById(R.id.organizerRoleTextView);
         tvorganizador.setText(event.organizador);
@@ -58,6 +61,9 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventViewHol
 
         TextView tvData = holder.itemView.findViewById(R.id.dateTimeTextView);
         tvData.setText(event.data.toString());
+
+        ImageView imagem = holder.itemView.findViewById(R.id.eventImageView);
+        imagem.setImageResource(R.drawable.inst1);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

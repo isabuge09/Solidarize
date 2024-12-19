@@ -55,6 +55,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button btncadastro = findViewById(R.id.addButton);
+        btncadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(LoginActivity.this, CadastroActivity.class);
+                startActivity(i2);
+            }
+        });
     }
 
 

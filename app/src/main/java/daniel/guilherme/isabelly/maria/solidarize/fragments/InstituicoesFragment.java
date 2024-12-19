@@ -1,14 +1,24 @@
 package daniel.guilherme.isabelly.maria.solidarize.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import daniel.guilherme.isabelly.maria.solidarize.R;
+import daniel.guilherme.isabelly.maria.solidarize.activities.EventoActivity;
+import daniel.guilherme.isabelly.maria.solidarize.model.AdapterEvent;
+import daniel.guilherme.isabelly.maria.solidarize.model.AdapterInstituicao;
+import daniel.guilherme.isabelly.maria.solidarize.model.HomeActivityViewModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,5 +72,24 @@ public class InstituicoesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_intituicoes, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        HomeActivityViewModel mViewModel = new ViewModelProvider(getActivity()).get(HomeActivityViewModel.class);
+
+        AdapterInstituicao adapterInstituicao = new AdapterInstituicao(mViewModel.getInstituicoes(), InstituicoesFragment.this);
+
+        RecyclerView rvInstituicao = view.findViewById(R.id.rvInstitution);
+        rvInstituicao.setAdapter(adapterInstituicao);
+
+        rvInstituicao.setLayoutManager(new LinearLayoutManager(getContext()));
+
+    }
+    public void navegarParaDetalhesInstituicao() {
+        Intent i = new Intent(getActivity(), InstituicoesFragment.class);
+        startActivity(i);
     }
 }
