@@ -2,13 +2,21 @@ package daniel.guilherme.isabelly.maria.solidarize.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import daniel.guilherme.isabelly.maria.solidarize.R;
+import daniel.guilherme.isabelly.maria.solidarize.model.AdapterPerfilColaboracao;
+import daniel.guilherme.isabelly.maria.solidarize.model.AdapterVoluntariado;
+import daniel.guilherme.isabelly.maria.solidarize.model.HomeActivityViewModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,4 +71,19 @@ public class PerfilFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_perfil, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        HomeActivityViewModel mViewModel = new ViewModelProvider(getActivity()).get(HomeActivityViewModel.class);
+
+        AdapterPerfilColaboracao adaptercolaboracao = new AdapterPerfilColaboracao(mViewModel.getColaboracoes(), PerfilFragment.this);
+
+        RecyclerView rvColaboradores = view.findViewById(R.id.collaboratorRecyclerView);
+        rvColaboradores.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        rvColaboradores.setAdapter(adaptercolaboracao);
+    }
+
+
 }

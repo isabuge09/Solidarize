@@ -70,11 +70,11 @@ public class HomeActivityViewModel extends ViewModel {
     public List<PerfilColaboracao> getColaboracoes() {
         List<PerfilColaboracao> colaboracoes = new ArrayList<>();
 
-        PerfilColaboracao c1 = new PerfilColaboracao(1);
-        PerfilColaboracao c2 = new PerfilColaboracao(2);
-        PerfilColaboracao c3 = new PerfilColaboracao(3);
-        PerfilColaboracao c4 = new PerfilColaboracao(4);
-        PerfilColaboracao c5 = new PerfilColaboracao(5);
+        PerfilColaboracao c1 = new PerfilColaboracao(1, "guilherme");
+        PerfilColaboracao c2 = new PerfilColaboracao(2, "daniel");
+        PerfilColaboracao c3 = new PerfilColaboracao(3, "maria");
+        PerfilColaboracao c4 = new PerfilColaboracao(4, "isabelly");
+        PerfilColaboracao c5 = new PerfilColaboracao(5, "stéphany");
 
         colaboracoes.add(c1);
         colaboracoes.add(c2);
