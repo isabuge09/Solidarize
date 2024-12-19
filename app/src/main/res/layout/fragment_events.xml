@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:id="@+id/main"
     tools:context=".fragments.EventsFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -14,10 +15,6 @@
         android:background="@color/background"
         android:paddingTop="?attr/actionBarSize"
         app:elevation="0dp">
-
-
-
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
@@ -49,14 +46,16 @@
         </com.google.android.material.tabs.TabLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvEvent"
         android:layout_width="match_parent"
-        android:layout_height="720dp"
+        android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:paddingTop="8dp"
         android:paddingBottom="16dp"
-        tools:listitem="@layout/evento_item"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_marginBottom="60dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/evento_item" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

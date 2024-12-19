@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".activities.EventoActivity">
@@ -81,7 +82,7 @@
                     android:id="@+id/organizerImageView"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/foto_perfil"
+                    android:src="@drawable/pfp1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:shapeAppearanceOverlay="@style/CircleImageView" />

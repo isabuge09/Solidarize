@@ -3,6 +3,7 @@ package daniel.guilherme.isabelly.maria.solidarize.model;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,8 +42,15 @@ public class AdapterPerfilColaboracao extends RecyclerView.Adapter<AdapterPerfil
     public void onBindViewHolder(@NonNull AdapterPerfilColaboracao.ColaboradorViewHolder holder, int position) {
         PerfilColaboracao colaborador = colaboradoresList.get(position);
 
+        String imageName = "pfp" + (position + 2);  // Adiciona 1 ao position, já que normalmente as imagens começam com 1 - 1 para não repetir a do usuário logaodo
+        int imageResId = holder.itemView.getContext().getResources().getIdentifier(imageName, "drawable", holder.itemView.getContext().getPackageName());
+
+
         TextView tvtitulo = holder.itemView.findViewById(R.id.collaboratorName);
         tvtitulo.setText(colaborador.username);
+
+        ImageView imagem = holder.itemView.findViewById(R.id.collaboratorAvatar);
+        imagem.setImageResource(imageResId);
     }
 
     @Override

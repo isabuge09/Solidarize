@@ -15,8 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import daniel.guilherme.isabelly.maria.solidarize.R;
-import daniel.guilherme.isabelly.maria.solidarize.activities.EventoActivity;
-import daniel.guilherme.isabelly.maria.solidarize.model.AdapterEvent;
 import daniel.guilherme.isabelly.maria.solidarize.model.AdapterInstituicao;
 import daniel.guilherme.isabelly.maria.solidarize.model.HomeActivityViewModel;
 

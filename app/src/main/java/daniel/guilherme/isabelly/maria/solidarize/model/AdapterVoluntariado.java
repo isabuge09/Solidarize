@@ -1,5 +1,6 @@
 package daniel.guilherme.isabelly.maria.solidarize.model;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ import org.w3c.dom.Text;
 import java.util.List;
 
 import daniel.guilherme.isabelly.maria.solidarize.R;
-import daniel.guilherme.isabelly.maria.solidarize.fragments.EventsFragment;
+import daniel.guilherme.isabelly.maria.solidarize.activities.VoluntariadoActivity;
 import daniel.guilherme.isabelly.maria.solidarize.fragments.VoluntariadoFragment;
 
 public class AdapterVoluntariado extends RecyclerView.Adapter<AdapterVoluntariado.VoluntariadoViewHolder> {
@@ -44,6 +45,9 @@ public class AdapterVoluntariado extends RecyclerView.Adapter<AdapterVoluntariad
     public void onBindViewHolder(@NonNull AdapterVoluntariado.VoluntariadoViewHolder holder, int position) {
         Voluntariado voluntariado = voluntariadoList.get(position);
 
+        String imageName = "fundo" + (position + 1);  // Adiciona 1 ao position, já que normalmente as imagens começam com 1
+        int imageResId = holder.itemView.getContext().getResources().getIdentifier(imageName, "drawable", holder.itemView.getContext().getPackageName());
+
         TextView tvtitulo = holder.itemView.findViewById(R.id.eventNameTextView);
         tvtitulo.setText(voluntariado.titulo);
 
@@ -54,7 +58,16 @@ public class AdapterVoluntariado extends RecyclerView.Adapter<AdapterVoluntariad
         tvcargaH.setText(voluntariado.cargaH);
 
         ImageView ivcapa = holder.itemView.findViewById(R.id.eventImageView);
-        ivcapa.setImageResource(R.drawable.fundo1);
+        ivcapa.setImageResource(imageResId);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.itemView.getContext(), VoluntariadoActivity.class);
+                intent.putExtra("INSTITUICAO_ID", voluntariado.titulo); // Passe qualquer dado necessário
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
