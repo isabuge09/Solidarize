@@ -183,6 +183,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="24dp"
             android:paddingVertical="12dp"
+            android:backgroundTint="@color/primaryColor"
             android:text="Participar"
             android:textAllCaps="false"
             app:cornerRadius="8dp"

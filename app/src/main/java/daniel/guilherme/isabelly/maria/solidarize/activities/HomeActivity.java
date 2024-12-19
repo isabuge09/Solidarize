@@ -1,7 +1,10 @@
 package daniel.guilherme.isabelly.maria.solidarize.activities;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +27,9 @@ public class HomeActivity extends AppCompatActivity {
 
     ActivityHomeBinding binding;
     private ImageView userImageView;
+
+    private ImageButton openModalButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +72,25 @@ public class HomeActivity extends AppCompatActivity {
 
             return true;
         });
+
+        openModalButton = findViewById(R.id.filterButton);
+
+        openModalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openModal();
+            }
+        });
     }
 
+
+    private void openModal() {
+        // Cria o Dialog
+        Dialog modalDialog = new Dialog(this);
+        modalDialog.setContentView(R.layout.modal_filtro_evento);
+        // Mostra o modal
+        modalDialog.show();
+    }
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

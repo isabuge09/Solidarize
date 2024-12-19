@@ -57,6 +57,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
+            <ImageButton
+                android:id="@+id/editProfileButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_add_24"
+                tools:ignore="MissingConstraints" />
+
             <TextView
                 android:id="@+id/userNickname"
                 android:layout_width="wrap_content"
@@ -161,10 +171,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/collaboratorTitle"
                 tools:listitem="@layout/colaborador_item"/>
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-

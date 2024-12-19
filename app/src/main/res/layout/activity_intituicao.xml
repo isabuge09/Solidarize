@@ -18,6 +18,7 @@
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/backgrounds/scenic" />
@@ -47,7 +48,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/profileImageView"
-            tools:text="Fundação Amor e Esperança" />
+            android:text="Fundação Amor e Esperança" />
 
         <TextView
             android:id="@+id/locationTextView"
@@ -60,7 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/institutionNameTextView"
-            tools:text="São Paulo, SP" />
+            android:text="São Paulo, SP" />
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/categoriesChipGroup"
@@ -117,7 +118,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/descriptionTitleTextView"
-            tools:text="A Fundação Amor e Esperança é uma organização sem fins lucrativos dedicada a melhorar a vida de crianças em situação de vulnerabilidade. Nosso foco principal é proporcionar educação de qualidade, apoio emocional e oportunidades de desenvolvimento para crianças e adolescentes." />
+            android:text="A Fundação Amor e Esperança é uma organização sem fins lucrativos dedicada a melhorar a vida de crianças em situação de vulnerabilidade. Nosso foco principal é proporcionar educação de qualidade, apoio emocional e oportunidades de desenvolvimento para crianças e adolescentes." />
 
         <TextView
             android:id="@+id/socialMediaTitleTextView"
@@ -211,6 +212,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_margin="4dp"
+                        android:background="@drawable/pfp2"
                         app:shapeAppearanceOverlay="@style/CircleImageView"
                         tools:src="@tools:sample/avatars" />
 
@@ -218,6 +220,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_margin="4dp"
+                        android:background="@drawable/pfp3"
                         app:shapeAppearanceOverlay="@style/CircleImageView"
                         tools:src="@tools:sample/avatars" />
 
@@ -225,6 +228,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_margin="4dp"
+                        android:background="@drawable/pfp4"
                         app:shapeAppearanceOverlay="@style/CircleImageView"
                         tools:src="@tools:sample/avatars" />
 
@@ -232,21 +236,15 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_margin="4dp"
-                        app:shapeAppearanceOverlay="@style/CircleImageView"
-                        tools:src="@tools:sample/avatars" />
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="4dp"
+                        android:background="@drawable/pfp5"
                         app:shapeAppearanceOverlay="@style/CircleImageView"
                         tools:src="@tools:sample/avatars" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
                         android:layout_marginStart="8dp"
+                        android:layout_gravity="center_vertical"
                         android:text="+23 outros"
                         android:textColor="@android:color/darker_gray" />
 

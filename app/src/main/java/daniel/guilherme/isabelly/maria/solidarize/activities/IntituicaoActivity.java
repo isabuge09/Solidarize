@@ -1,6 +1,7 @@
 package daniel.guilherme.isabelly.maria.solidarize.activities;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,5 +23,9 @@ public class IntituicaoActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        ImageView imagemInstituicao = findViewById(R.id.coverImageView);
+        imagemInstituicao.setImageResource(R.drawable.fundo4);
+        ImageView pfpInstituicao = findViewById(R.id.profileImageView);
+        pfpInstituicao.setImageResource(R.drawable.pfp5);
     }
 }

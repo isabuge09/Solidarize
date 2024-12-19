@@ -1,5 +1,6 @@
 package daniel.guilherme.isabelly.maria.solidarize.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,8 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import daniel.guilherme.isabelly.maria.solidarize.R;
+import daniel.guilherme.isabelly.maria.solidarize.activities.EditarPerfilActivity;
+import daniel.guilherme.isabelly.maria.solidarize.activities.EventoActivity;
 import daniel.guilherme.isabelly.maria.solidarize.model.AdapterPerfilColaboracao;
 import daniel.guilherme.isabelly.maria.solidarize.model.AdapterVoluntariado;
 import daniel.guilherme.isabelly.maria.solidarize.model.HomeActivityViewModel;
@@ -83,6 +87,15 @@ public class PerfilFragment extends Fragment {
         RecyclerView rvColaboradores = view.findViewById(R.id.collaboratorRecyclerView);
         rvColaboradores.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         rvColaboradores.setAdapter(adaptercolaboracao);
+
+        ImageButton btneditar = view.findViewById(R.id.editProfileButton);
+        btneditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), EditarPerfilActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
