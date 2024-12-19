@@ -3,6 +3,7 @@ package daniel.guilherme.isabelly.maria.solidarize.model;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -51,6 +52,9 @@ public class AdapterVoluntariado extends RecyclerView.Adapter<AdapterVoluntariad
 
         TextView tvcargaH = holder.itemView.findViewById(R.id.workloadTextView);
         tvcargaH.setText(voluntariado.cargaH);
+
+        ImageView ivcapa = holder.itemView.findViewById(R.id.eventImageView);
+        ivcapa.setImageResource(R.drawable.fundo1);
     }
 
     @Override
