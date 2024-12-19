@@ -65,9 +65,8 @@ public class EventsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        Log.d(TAG, "onCreateView called");
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView chamado");
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_events, container, false);
     }
@@ -75,30 +74,30 @@ public class EventsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.d(TAG, "onViewCreated called");
+        Log.d(TAG, "onViewCreated chamado");
 
         HomeActivityViewModel mViewModel = new ViewModelProvider(getActivity()).get(HomeActivityViewModel.class);
 
         List<Evento> eventos = mViewModel.getEventos();
 
         if (eventos == null || eventos.isEmpty()) {
-            Log.e(TAG, "Eventos list is null or empty");
+            Log.e(TAG, "Lista de eventos nula ou vazia");
             return;
         }
 
-        Log.d(TAG, "Number of eventos: " + eventos.size());
+        Log.d(TAG, "Numeros de eventos: " + eventos.size());
 
         AdapterEvent adapterEvent = new AdapterEvent(eventos, this);
 
         RecyclerView rvEventos = view.findViewById(R.id.rvEvent);
         if (rvEventos == null) {
-            Log.e(TAG, "RecyclerView not found in layout");
+            Log.e(TAG, "Lista(RecyclerView) não encontrada");
             return;
         }
 
         rvEventos.setAdapter(adapterEvent);
         rvEventos.setLayoutManager(new LinearLayoutManager(getContext()));
-        Log.d(TAG, "RecyclerView setup complete");
+        Log.d(TAG, "Lista(RecyclerView) setup complete");
     }
 
     public void navegarParaDetalhesEvento(){
@@ -107,10 +106,10 @@ public class EventsFragment extends Fragment {
                 Intent i = new Intent(getActivity(), EventoActivity.class);
                 startActivity(i);
             } else {
-                Log.e(TAG, "Activity is null when trying to navigate");
+                Log.e(TAG, "Tela é nula quando tenta navigar");
             }
         } catch (Exception e) {
-            Log.e(TAG, "Error navigating to EventoActivity", e);
+            Log.e(TAG, "Erro na navegação entre telas", e);
         }
     }
 }
