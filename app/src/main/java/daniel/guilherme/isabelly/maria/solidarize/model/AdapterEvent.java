@@ -64,7 +64,6 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventViewHol
 
         ImageView imagem = holder.itemView.findViewById(R.id.eventImageView);
         imagem.setImageResource(R.drawable.inst1);
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
