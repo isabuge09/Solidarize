@@ -47,7 +47,7 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.EventViewHol
         TextView tvname = holder.itemView.findViewById(R.id.organizerNameTextView);
         tvname.setText(event.nomeIntituicao);
 
-        Chip categoria = holder.itemView.findViewById(R.id.categoryChip);
+        Chip categoria = holder.itemView.findViewById(R.id.categoryChipInst1);
         categoria.setText(event.categoria);
 
         TextView tvorganizador = holder.itemView.findViewById(R.id.organizerRoleTextView);

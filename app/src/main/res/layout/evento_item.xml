@@ -33,17 +33,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <com.google.android.material.chip.Chip
-            android:id="@+id/categoryChip"
-            android:layout_width="wrap_content"
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/categoriesChipGroup"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:textColor="@android:color/white"
-            android:textSize="12sp"
-            app:chipBackgroundColor="@color/primaryColor"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Educação" />
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/categoryChipEvent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saúde"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                app:chipBackgroundColor="#E0F7FA"
+                android:textColor="#00838F" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/categoryChipEvent2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direito Humanos"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                app:chipBackgroundColor="#E8F5E9"
+                android:textColor="#2E7D32" />
+
+        </com.google.android.material.chip.ChipGroup>
 
         <TextView
             android:id="@+id/eventNameTextView"

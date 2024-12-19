@@ -64,7 +64,7 @@ public class AdapterVoluntariado extends RecyclerView.Adapter<AdapterVoluntariad
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.itemView.getContext(), VoluntariadoActivity.class);
-                intent.putExtra("INSTITUICAO_ID", voluntariado.titulo); // Passe qualquer dado necessário
+                intent.putExtra("VOLUNTARIADO_NOME", voluntariado.titulo); // Passe qualquer dado necessário
                 holder.itemView.getContext().startActivity(intent);
             }
         });

@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:padding="15dp">
 
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/eventImageView"
             android:layout_width="0dp"
@@ -43,6 +44,36 @@
             app:layout_constraintTop_toBottomOf="@+id/eventImageView"
             tools:text="Nome de Voluntariado" />
 
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/categoriesChipGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/categoryChipInst1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saúde"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                app:chipBackgroundColor="#E0F7FA"
+                android:textColor="#00838F" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/categoryChipInst2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direito Humanos"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                app:chipBackgroundColor="#E8F5E9"
+                android:textColor="#2E7D32" />
+
+        </com.google.android.material.chip.ChipGroup>
         <TextView
             android:id="@+id/eventDescriptionTextView"
             android:layout_width="0dp"

@@ -47,6 +47,37 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/categoriesChipGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/locationTextView">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/categoryChipVol1"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saúde"
+                        android:textColor="#00838F"
+                        app:chipBackgroundColor="#E0F7FA" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/categoryChipVol2"
+                        style="@style/Widget.MaterialComponents.Chip.Action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Direito Humanos"
+                        android:textColor="#2E7D32"
+                        app:chipBackgroundColor="#E8F5E9" />
+
+                </com.google.android.material.chip.ChipGroup>
+
                 <LinearLayout
                     android:id="@+id/linearLayout"
                     android:layout_width="match_parent"

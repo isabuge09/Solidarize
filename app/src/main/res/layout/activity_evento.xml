@@ -49,17 +49,22 @@
             app:layout_constraintTop_toBottomOf="@id/eventNameTextView">
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/categoryChipEvent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direito Humanos"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                app:chipBackgroundColor="#E8F5E9"
+                android:textColor="#2E7D32" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/categoryChipEvent2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Saúde"
-                app:chipBackgroundColor="@color/primaryColor" />
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Doação"
-                app:chipBackgroundColor="@color/lavender" />
-
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                app:chipBackgroundColor="#E0F7FA"
+                android:textColor="#00838F" />
         </com.google.android.material.chip.ChipGroup>
 
         <com.google.android.material.card.MaterialCardView

@@ -74,22 +74,22 @@
             app:layout_constraintTop_toBottomOf="@id/locationTextView">
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/categoryChipInst1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Educação"
-                app:chipBackgroundColor="@color/design_default_color_secondary" />
+                android:text="Saúde"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                app:chipBackgroundColor="#E0F7FA"
+                android:textColor="#00838F" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/categoryChipInst2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Crianças"
-                app:chipBackgroundColor="@color/lavender" />
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Assistência Social"
-                app:chipBackgroundColor="@color/primaryColor" />
+                android:text="Direito Humanos"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                app:chipBackgroundColor="#E8F5E9"
+                android:textColor="#2E7D32" />
 
         </com.google.android.material.chip.ChipGroup>
 

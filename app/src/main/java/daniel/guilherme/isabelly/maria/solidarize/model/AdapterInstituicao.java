@@ -44,7 +44,7 @@ public class AdapterInstituicao extends RecyclerView.Adapter<AdapterInstituicao.
     public void onBindViewHolder(@NonNull InstituicaoViewHolder holder, int position) {
         Instituicao instituicao = instituicaoList.get(position);
 
-        String imageName = "inst" + (position + 1);  // Adiciona 1 ao position, já que normalmente as imagens começam com 1
+        String imageName = "fundo" + (position + 1);  // Adiciona 1 ao position, já que normalmente as imagens começam com 1
         int imageResId = holder.itemView.getContext().getResources().getIdentifier(imageName, "drawable", holder.itemView.getContext().getPackageName());
 
         TextView tvname = holder.itemView.findViewById(R.id.institutionNameTextView);
